@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanisha | BCA Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#ff7a18,#ffb347);
+  color:#1f2933;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,0.25);
+  backdrop-filter:blur(10px);
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+nav h2{
+  color:#7c2d12;
+}
+
+nav a{
+  color:#1f2933;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+
+nav a:hover{
+  color:#7c2d12;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 10%;
+}
+
+.hero h1{
+  font-size:3.4rem;
+  color:#7c2d12;
+  animation:fadeDown 1.4s ease;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  animation:fadeUp 1.4s ease;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:14px 36px;
+  border:none;
+  border-radius:30px;
+  background:#7c2d12;
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.08);
+}
+
+/* SECTIONS */
+section{
+  padding:90px 10%;
+  background:#fff;
+}
+
+section:nth-child(even){
+  background:#fff7ed;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:45px;
+  font-size:2.4rem;
+  color:#7c2d12;
+}
+
+/* ABOUT */
+.about p{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  line-height:1.9;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  background:#ffedd5;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.skill{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  transition:0.4s;
+}
+
+.skill:hover{
+  background:#fed7aa;
+  transform:scale(1.08);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.project{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+  transition:0.4s;
+}
+
+.project:hover{
+  transform:translateY(-10px);
+  background:#fff7ed;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  display:inline-block;
+  margin:10px;
+  text-decoration:none;
+  color:#7c2d12;
+  font-weight:600;
+}
+
+.contact a:hover{
+  text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+  background:#7c2d12;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Vanisha</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <h1>Hello, I’m Vanisha</h1>
+    <p>BCA Student | Creative Learner | Aspiring Web Developer</p>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      Explore More
+    </button>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am Vanisha, a Bachelor of Computer Applications (BCA) student who enjoys learning
+    how technology and creativity come together. I have a strong interest in web design,
+    simple animations, and building clean, user-friendly interfaces.
+  </p>
+
+  <div class="cards">
+    <div class="card">🧠 Quick Learner</div>
+    <div class="card">🎨 Creative Thinker</div>
+    <div class="card">💬 Good Communicator</div>
+    <div class="card">🚀 Passionate About Web Development</div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">JavaScript (Basics)</div>
+    <div class="skill">C Programming</div>
+    <div class="skill">DBMS</div>
+    <div class="skill">Web Design</div>
+    <div class="skill">Communication Skills</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Personal Portfolio Website</h3>
+      <p>Designed with HTML, CSS and JavaScript using animations.</p>
+    </div>
+    <div class="project">
+      <h3>Academic Mini Project</h3>
+      <p>College project focused on logic building and database concepts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: 25bcad69@kristujayanti.com</p>
+  <p>Location: India</p>
+</section>
+
+<footer>
+  <p>© 2026 Vanisha | BCA Digital Portfolio</p>
+</footer>
+
+</body>
+</html>
